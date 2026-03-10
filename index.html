@@ -515,7 +515,7 @@
                 gap: 16px;
             }
             .element-row-bottom {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
                 margin-top: 16px;
             }
@@ -769,13 +769,17 @@
             transform: rotate(45deg);
         }
 
-        .section-cta {
-            text-align: center;
-            padding: 40px 20px;
+        .mobile-farm-image {
+            display: none;
+            padding: 0 7vw;
         }
 
-        .section-cta .btn {
-            margin: 0 8px;
+        .section-cta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 40px 20px;
         }
 
         .final-cta {
@@ -952,15 +956,53 @@
             .element-card.expanded .element-thumb {
                 min-height: 45vh;
             }
+
+            .site-header img {
+                height: 70px;
+            }
+
+            .footer-logo {
+                height: 80px;
+            }
         }
 
         @media (max-width: 600px) {
             .section-shell {
                 padding: 80px 0;
+                width: min(1200px, 86vw);
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-inner {
+                width: 90vw;
+            }
+
+            .hero-content {
+                padding: 24px 20px 30px;
+            }
+
+            .site-header {
+                padding: 12px 20px;
+            }
+
+            .site-header img {
+                height: 55px;
+            }
+
+            .footer-logo {
+                height: 65px;
             }
 
             .cta-group {
                 flex-direction: column;
+            }
+
+            .section-cta {
+                flex-direction: column;
+                align-items: center;
             }
 
             .hero-meta {
@@ -969,6 +1011,34 @@
 
             .portrait img {
                 height: 320px;
+            }
+
+            .early-bird-meta {
+                margin-left: -6px;
+                margin-right: -6px;
+            }
+
+            .section-cta {
+                padding: 30px 20px;
+            }
+
+            .mobile-farm-image {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .room-pricing-table th,
+            .room-pricing-table td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+
+            .pricing-card {
+                padding: 24px;
+            }
+
+            .register-buttons {
+                flex-direction: column;
             }
         }
 
@@ -1210,6 +1280,10 @@
             </div>
         </div>
     </section>
+
+    <div class="mobile-farm-image">
+        <img src="northendfarm.jpeg" alt="North End Farm, Dorset" style="width: 100%; border-radius: 20px;">
+    </div>
 
     <section class="section-shell testimonials" id="who">
         <p class="eyebrow">Who This Training Is For</p>
