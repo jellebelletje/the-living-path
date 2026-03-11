@@ -118,25 +118,25 @@
             align-items: center;
             gap: 16px;
             margin-top: 28px;
-            padding: 14px 24px;
-            background: linear-gradient(135deg, rgba(203,164,91,0.15), rgba(203,164,91,0.08));
-            border: 1px solid rgba(203,164,91,0.5);
+            padding: 18px 28px;
+            background: linear-gradient(135deg, rgba(203,164,91,0.35), rgba(203,164,91,0.2));
+            border: 2px solid var(--accent-gold);
             border-radius: 16px;
-            backdrop-filter: blur(10px);
             flex-wrap: wrap;
         }
 
         .early-bird-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent-gold);
+            color: #705a1a;
         }
 
         .early-bird-details {
-            font-size: 0.9rem;
-            color: var(--soot);
-            opacity: 0.8;
+            font-size: 1rem;
+            color: var(--ink);
+            font-weight: 500;
+            opacity: 1;
         }
 
         .early-bird-link {
@@ -700,7 +700,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
-            color: var(--clay);
+            color: #6b5d4f;
             border-bottom: 2px solid rgba(203,164,91,0.3);
         }
 
@@ -714,13 +714,13 @@
         }
 
         .room-pricing-table .early-bird-col {
-            color: var(--accent-gold);
-            font-weight: 600;
+            color: #9a7a2e;
+            font-weight: 700;
         }
 
         .pricing-note {
-            font-size: 0.85rem;
-            color: var(--clay);
+            font-size: 0.88rem;
+            color: #6b5d4f;
             margin-top: 8px;
         }
 
@@ -1111,7 +1111,7 @@
                 <div class="meta-card early-bird-meta">
                     <span class="label">Early Bird — Save £150</span>
                     <span class="value">Prices start from £1,130 per module</span>
-                    <span class="early-bird-sub">Book before April 13 · Only 6 places</span>
+                    <span class="early-bird-sub">Book before April 13 · Only 6 early bird places available</span>
                     <a href="#pricing" class="early-bird-link">Register Now →</a>
                 </div>
             </aside>
@@ -1157,7 +1157,7 @@
 
     <section class="section-shell elements" id="curriculum">
         <p class="eyebrow module-badge">Module One: Your Elemental Magic</p>
-        <h2 class="section-title">Awakening the Unique Gift the Five Forces Weave Into You</h2>
+        <h2 class="section-title">The Gift the Five Elements Weave in You</h2>
         <p class="lede" style="max-width: 800px;">We begin where all creation begins: with the elements. Earth, water, fire, air, and ether are the fundamental forces that weave through your body, your consciousness, your work, and the natural world around you.</p>
         <div style="max-width: 800px; margin-top: 30px; margin-bottom: 40px;">
             <h3 class="module-subhead">Liberating the Elements Within You</h3>
@@ -1170,7 +1170,7 @@
             <p style="margin-top: 16px;">Through specific practices drawn from yogic and energetic traditions, you'll develop a feeling that you sense of how earth grounds, how water flows, how fire transforms, how air moves, and how ether holds space for it all.</p>
 
             <h3 class="module-subhead" style="margin-top: 40px;">The Power of Kriya</h3>
-            <p>The power of kriya is at the heart of this module. In yogic tradition, kriya means "complete action" or "sequence" - it's the technology of creation itself. This is Kundalini Yoga's core gift - kriya as living technology. Understanding how to work with it at this depth equips you for what these times are calling forth. The will transform how you attract teaching kriyas going forward.</p>
+            <p>The power of kriya is at the heart of this module. In yogic tradition, kriya means "complete action" or "sequence" - it's the technology of creation itself. This is Kundalini Yoga's core gift - kriya as living technology. Understanding how to work with it at this depth equips you for what these times are calling forth. This will transform how you attract teaching kriyas going forward.</p>
             <p style="margin-top: 16px;">When you understand kriya as elemental flow, as the alive process within you and within all life, your work shifts. You're facilitating a living process by honouring it. You're working with the same forces that create mountains, move oceans, and birth stars.</p>
 
             <h3 class="module-subhead" style="margin-top: 40px;">Questions You'll Explore</h3>
@@ -1357,13 +1357,17 @@
                 <p style="font-style: normal;">While this training draws from yogic traditions (mainly Kundalini Yoga) and energy healing work, you don't need to be a yoga teacher to benefit. The elemental framework and practices we'll explore are universal. Whether you work as a therapist, coach, healer, bodyworker, meditation teacher, or any other form of transformational facilitator, this training will deepen your capacity to serve.</p>
             </article>
         </div>
+        <p class="pricing-note" style="max-width: 800px; margin-top: 40px;">We reserve the right to decline applications where we feel the training may not be the right fit.</p>
     </section>
 
     <section class="section-shell pricing" id="pricing">
         <p class="eyebrow">Investment &amp; Logistics</p>
         <h2 class="section-title">Module One: Your Elemental Magic</h2>
         <p class="lede" style="max-width: 800px; margin-bottom: 20px;">This includes training fees, accommodation at North End Farm, all organic meals prepared by our cook, and all course materials. Transport to all sacred sites visited. 2 mentoring sessions post training.</p>
-        <p style="max-width: 800px; margin-bottom: 40px;">Payment plans are available. Save £150 with our early bird offer — book before April 13.</p>
+        <div class="early-bird-banner" style="max-width: 800px; margin-bottom: 40px; margin-top: 20px;">
+            <span class="early-bird-text">Save £150 — Early Bird Offer</span>
+            <span class="early-bird-details">Payment plans available · Book before April 13</span>
+        </div>
         <div class="pricing-grid">
             <article class="pricing-card featured reveal" style="grid-column: span 2;">
                 <h3>What's Included</h3>
@@ -1371,7 +1375,7 @@
                     <li>Immersive study and practice for each module</li>
                     <li>Accommodation in historic North End Farmhouse</li>
                     <li>All organic meals prepared by our cook</li>
-                    <li>Transfer from Bristol Airport to North End Farm and return</li>
+                    <li>Transfer from Bristol Airport to North End Farm and return (if required)</li>
                     <li>Transportation to local sacred sites</li>
                     <li>Ongoing support and guidance throughout the training</li>
                     <li>Course manual</li>
@@ -1457,7 +1461,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">What's the daily schedule like?<span>+</span></div>
-                <div class="faq-answer">Days begin with morning practice around 6:00 AM, followed by breakfast and teaching sessions throughout the day. Afternoons typically include practice, study, and time for integration. Evenings offer group discussions and closing practices. The schedule balances structure with flexibility, intensity with rest.</div>
+                <div class="faq-answer">Days begin with morning practice around 6:00 AM, followed by breakfast and teaching sessions throughout the day. Afternoons typically include practice, study, and time for integration. Evenings offer group discussions and closing practices. We'll also take one or two excursions to local sacred sites during the week, which will follow a different rhythm. The schedule balances structure with flexibility, intensity with rest.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">What should I bring?<span>+</span></div>
@@ -1469,15 +1473,28 @@
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">Will I receive a certificate?<span>+</span></div>
-                <div class="faq-answer">Upon completion of all five modules, you'll receive a certificate of completion from this training program. This represents your commitment to advanced study and depth work in spiritual practice and transformational facilitation.</div>
+                <div class="faq-answer">You'll receive a certificate of attendance after each module you complete.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">What if I have physical limitations or health concerns?<span>+</span></div>
-                <div class="faq-answer">Please contact me directly to discuss. The practices can often be modified to work with different body needs, but it's important we talk about your specific situation before you register.</div>
+                <div class="faq-answer">Please <a href="mailto:info@harnalkaur.co.uk" style="color: var(--accent-gold);">contact us directly</a> to discuss. The practices can often be modified to work with different body needs, but it's important we talk about your specific situation before you register.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">Can I arrive early or stay late?<span>+</span></div>
                 <div class="faq-answer">The farmhouse may be available for an extra night before or after the training week. Please inquire about availability when registering.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is your cancellation policy?<span>+</span></div>
+                <div class="faq-answer">
+                    <p>In case of cancellation, you must inform us in writing. Cancellation charges apply as follows:</p>
+                    <ul style="margin: 12px 0; padding-left: 20px;">
+                        <li>Any cancellation made at any time will result in the loss of a £100 administration fee.</li>
+                        <li>Cancellations made before April 15th 2026 will be refunded in full (minus the administration fee).</li>
+                        <li>Cancellations made between April 15th and May 15th 2026 will result in a loss of 50% of the total retreat price.</li>
+                        <li>Cancellations made from May 15th up to the start of the retreat (June 15th 2026) will result in a total loss of the retreat price.</li>
+                    </ul>
+                    <p>We reserve the right to cancel the retreat, in which case all monies paid will be refunded in full.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1489,11 +1506,15 @@
             <p style="max-width:640px; color:rgba(255,255,255,0.8);">This training offers you time and space to honor the gifts you carry - the parts of you you've glimpsed but haven't fully inhabited, the wisdom waiting beneath the surface. To understand them deeply, see what they truly are. When you know your gifts this intimately, sharing them becomes natural. Not performance. Just authentic offering.</p>
             <p style="max-width:640px; color:rgba(255,255,255,0.8); margin-top: 16px;">A circle of fellow practitioners committed to depth holds this work. Practices and teachings that have the power to change how you live and serve.</p>
             <p style="max-width:640px; color:rgba(255,255,255,0.8); margin-top: 24px;">We look forward to walking this path with you. With deep respect for your journey,</p>
-            <p style="max-width:640px; color:white; margin-top: 16px;"><strong>Har Nal Kaur &amp; Guru Deva</strong><br>The Living Path</p>
+            <p style="max-width:640px; color:white; margin-top: 16px;"><strong>Har Nal &amp; Guru Deva</strong><br>The Living Path</p>
             <div class="cta-group" style="margin-top:30px;">
                 <a href="https://calendly.com/harnal-kundaliniawakening/the-living-path-early-bird-price-clone" target="_blank" class="btn btn-primary magnetic">Register Now</a>
                 <a href="https://calendly.com/harnal-kundaliniawakening/new-meeting" target="_blank" class="btn btn-outline magnetic" style="color:white;border-color:rgba(255,255,255,0.4);">Register — Instalments</a>
             </div>
+            <p style="max-width:640px; color:rgba(255,255,255,0.7); margin-top: 40px; font-size: 0.95rem;">
+                Questions? Get in touch:<br>
+                <a href="mailto:info@harnalkaur.co.uk" style="color:white; text-decoration: underline;">info@harnalkaur.co.uk</a> · <a href="tel:+4407740435379" style="color:white; text-decoration: underline;">+44 (0) 7740 435379</a>
+            </p>
             <img src="logo.png" alt="The Light of the Soul" class="footer-logo" style="margin-top: 50px;">
         </div>
     </section>
