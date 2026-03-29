@@ -1083,6 +1083,156 @@
                 transition-duration: 0.001ms !important;
             }
         }
+        /* Element Wheel */
+        .element-wheel {
+            max-width: 800px;
+            margin: 50px 0;
+            position: relative;
+        }
+        .wheel-container {
+            position: relative;
+            width: 520px;
+            height: 440px;
+            margin: 0 auto;
+        }
+        .wheel-ring {
+            position: absolute;
+            top: 50px;
+            left: 110px;
+            right: 110px;
+            bottom: 90px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(203,164,91,0.45);
+        }
+        .wheel-ring::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 1px dashed rgba(203,164,91,0.25);
+        }
+        @keyframes wheel-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .wheel-ring-motion {
+            position: absolute;
+            top: 42px;
+            left: 102px;
+            right: 102px;
+            bottom: 82px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            border-top-color: rgba(203,164,91,0.15);
+            animation: wheel-spin 30s linear infinite;
+        }
+        .wheel-centre {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .wheel-centre-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--soot);
+            line-height: 1.3;
+            font-style: italic;
+        }
+        .wheel-node {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+        }
+        .wheel-node:hover {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+        .wheel-node-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid rgba(203,164,91,0.3);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .wheel-node-icon.earth { background: linear-gradient(135deg, #e8dcc8, #d4c4a8); }
+        .wheel-node-icon.water { background: linear-gradient(135deg, #d4e4ed, #b8d0e0); }
+        .wheel-node-icon.fire { background: linear-gradient(135deg, #f0d8c8, #e4bfa8); }
+        .wheel-node-icon.air { background: linear-gradient(135deg, #dde8dc, #c8d8c4); }
+        .wheel-node-icon.ether { background: linear-gradient(135deg, #e8e0f0, #d8d0e4); }
+        .wheel-node-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-top: 6px;
+        }
+        /* Position nodes around the circle — pentagon layout, percentages relative to 400x420 container */
+        .wheel-pos-top { top: 12%; left: 50%; }
+        .wheel-pos-right { top: 33%; left: 92%; }
+        .wheel-pos-bottom-right { top: 68%; left: 78%; }
+        .wheel-pos-bottom-left { top: 68%; left: 22%; }
+        .wheel-pos-left { top: 33%; left: 8%; }
+        .wheel-site {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.72rem;
+            color: var(--soot);
+            opacity: 0.55;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+        .wheel-site .site-icon {
+            font-size: 0.85rem;
+            line-height: 1;
+        }
+        .wheel-site-tl { top: 8%; left: 2%; }
+        .wheel-site-tr { top: 8%; right: 2%; }
+        .wheel-site-bl { bottom: 12%; left: 2%; }
+        .wheel-site-br { bottom: 12%; right: 2%; }
+        @media (max-width: 600px) {
+            .wheel-container {
+                width: 320px;
+                height: 380px;
+            }
+            .wheel-ring {
+                left: 60px;
+                right: 60px;
+                bottom: 80px;
+            }
+            .wheel-ring-motion {
+                left: 52px;
+                right: 52px;
+                bottom: 72px;
+            }
+            .wheel-node-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+            }
+            .wheel-node-label {
+                font-size: 0.78rem;
+            }
+            .wheel-centre-text {
+                font-size: 0.85rem;
+            }
+            .wheel-site {
+                font-size: 0.62rem;
+            }
+            .wheel-site .site-icon {
+                font-size: 0.72rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1099,8 +1249,8 @@
                 <h1>The Living Path</h1>
                 <p>You've witnessed transformation enough times to know it's real. And yet there is something else you keep sensing - a depth that's there, just out of reach. You catch glimpses, then it's gone. The way back there isn't clear yet - how to stay, how to work from that place.</p>
                 <div class="cta-group">
-                    <a href="#pricing" class="btn btn-primary magnetic">Begin Your Journey</a>
-                    <a href="#curriculum" class="btn btn-ghost magnetic">Explore Module One</a>
+                    <a href="#curriculum" class="btn btn-primary magnetic">Begin Your Journey</a>
+                    <a href="https://calendly.com/harnal-kundaliniawakening/enquiry-about-course" target="_blank" rel="noopener noreferrer" class="btn btn-ghost magnetic">Book Discovery Call</a>
                 </div>
             </div>
             <aside class="hero-meta reveal" aria-label="Program facts">
@@ -1168,7 +1318,10 @@
         <h2 class="section-title">The Gift the Five Elements Weave in You</h2>
         <p class="lede" style="max-width: 800px;">We begin where all creation begins: with the elements. Earth, water, fire, air, and ether are the fundamental forces that weave through your body, your consciousness, your work, and the natural world around you.</p>
         <div style="max-width: 800px; margin-top: 30px; margin-bottom: 40px;">
-            <h3 class="module-subhead">Liberating the Elements Within You</h3>
+            <p>Something in you already knows there is more available. You've given so much to your path — your practice, your people, the work you feel called to do. And through all of that giving, a quieter knowing has been growing: that there is a deeper source waiting to meet you. A place where your energy renews rather than depletes. Where the passion that first drew you to this work isn't just a memory — it's alive, present, and ready to move through you again.</p>
+            <p style="margin-top: 16px;">This module is about coming home to that aliveness. When you reconnect with the elemental forces that are alive in you — not as concepts but as felt, embodied experience — something shifts. Your spirit remembers what it came here to do. The heaviness lifts. A natural vitality returns, not because you've pushed harder, but because you've finally made room for what was always there.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">Liberating the Elements Within You</h3>
             <p>This is what this first week is really about.</p>
             <p style="margin-top: 16px;">The elements have been defined, categorized, taught in specific ways. You've learned what earth is supposed to feel like. What fire is meant to do. How water should flow. As if there's only one way to experience them.</p>
             <p style="margin-top: 16px;">The elements alive in you are waiting to be discovered, not confirmed. Your earth might ground in ways traditional teachings never described. Your fire might burn with a quality that doesn't fit the usual definitions. Your water might move in patterns uniquely yours.</p>
@@ -1180,6 +1333,45 @@
             <h3 class="module-subhead" style="margin-top: 40px;">The Power of Kriya</h3>
             <p>The power of kriya is at the heart of this module. In yogic tradition, kriya means "complete action" or "sequence" - it's the technology of creation itself. This is Kundalini Yoga's core gift - kriya as living technology. Understanding how to work with it at this depth equips you for what these times are calling forth. This will transform how you attract teaching kriyas going forward.</p>
             <p style="margin-top: 16px;">When you understand kriya as elemental flow, as the alive process within you and within all life, your work shifts. You're facilitating a living process by honouring it. You're working with the same forces that create mountains, move oceans, and birth stars.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">How the Week Unfolds</h3>
+            <p>Each of the five elements receives a full day of dedicated exploration — through yogic practice, meditation, self-inquiry, and time in the land. You'll begin to recognise your own elemental constitution: which two elements are most alive in you, how they shape your gifts, and how they want to express through your work. This isn't abstract theory. It's felt, embodied discovery.</p>
+            <p style="margin-top: 16px;">Woven through the week are visits to sacred sites that relate to the elements — Winterbourne Abbas, Avebury, Glastonbury, and the Jurassic Coast. We'll hold ceremony at each one. The land becomes part of the teaching — each place holding something specific for your process.</p>
+            <div class="element-wheel reveal">
+                <div class="wheel-container">
+                    <div class="wheel-ring"></div>
+                    <div class="wheel-ring-motion"></div>
+                    <div class="wheel-node wheel-pos-top">
+                        <div class="wheel-node-icon ether">&#x2728;</div>
+                        <span class="wheel-node-label">Ether</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-right">
+                        <div class="wheel-node-icon fire">&#x1F525;</div>
+                        <span class="wheel-node-label">Fire</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-bottom-right">
+                        <div class="wheel-node-icon earth">&#x1F33F;</div>
+                        <span class="wheel-node-label">Earth</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-bottom-left">
+                        <div class="wheel-node-icon water">&#x1F30A;</div>
+                        <span class="wheel-node-label">Water</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-left">
+                        <div class="wheel-node-icon air">&#x1F343;</div>
+                        <span class="wheel-node-label">Air</span>
+                    </div>
+                    <div class="wheel-centre">
+                        <span class="wheel-centre-text">Your elemental<br>constitution</span>
+                    </div>
+                    <div class="wheel-site wheel-site-tl"><span class="site-icon">&#x26ED;</span>Winterbourne Abbas</div>
+                    <div class="wheel-site wheel-site-tr"><span class="site-icon">&#x1F5FF;</span>Avebury</div>
+                    <div class="wheel-site wheel-site-bl"><span class="site-icon">&#x26F0;&#xFE0F;</span>Glastonbury</div>
+                    <div class="wheel-site wheel-site-br"><span class="site-icon">&#x1F30A;</span>Jurassic Coast</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 16px;">By the end of the week, you'll have a felt sense of your own elemental constitution — which two elements are strongest in you, how they shape your gifts, and how to work with them consciously. You'll stop trying to be the kind of healer or teacher you think you should be, and start trusting the one you actually are. That alone changes everything: how you hold space, how you teach, how you live. The exhaustion that comes from working against your own nature begins to fall away, replaced by something far more sustainable — the energy that flows when you're finally aligned with what's truly yours.</p>
 
             <h3 class="module-subhead" style="margin-top: 40px;">Questions You'll Explore</h3>
             <p>What is your unique way of connecting with the elemental forces? How do you receive their wisdom? How do they speak through your body, through your voice, through your work? What happens when you consciously weave with the elements?</p>
